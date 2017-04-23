@@ -1,0 +1,24 @@
+{
+  "name": "ui",
+  "version": "7.0.0",
+  "description": "UDVI USER INTERFACE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsureshreddy/ui.git"
+  },
+  "keywords": [
+    "UDVI",
+    "UI",
+    "INTERFACE"
+  ],
+  "author": "Suresh Reddy Guntaka <sureshreddy.guntaka@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gsureshreddy/ui/issues"
+  },
+  "homepage": "https://github.com/gsureshreddy/ui#readme"
+}
