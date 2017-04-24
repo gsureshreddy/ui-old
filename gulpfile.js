@@ -2,7 +2,6 @@ var gulp                = require('gulp');
 var del                 = require('del');
 var concat              = require('gulp-concat');
 var angularFilesort     = require('gulp-angular-filesort');
-var angularModuleSort   = require('gulp-ng-module-sort')
 
 gulp.task('clean', function () {
     return (del([
