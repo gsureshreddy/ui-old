@@ -1,7 +1,7 @@
 {
   "name": "ui",
   "description": "UDVI USER INTERFACE",
-  "main": "index.js",
+  "main": "./release/ui.all.js",
   "authors": [
     "Suresh Reddy Guntaka <sureshreddy.guntaka@gmail.com>"
   ],
