@@ -1,1 +1,1 @@
-angular.module("ui.layout", ["ui.core"]);
+angular.module("ui.layout", ["ui.core", "ui.navigation"]);
