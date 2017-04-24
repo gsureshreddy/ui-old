@@ -1,4 +1,7 @@
-angular.module("ui.core", []);
+angular.module("ui.core", [])
+.run(function () {
+    console.log('Invoking Run of Core Module');
+});
 (function (angular, coreModule, global, undefined) {
 
     /**
@@ -39,11 +42,17 @@ angular.module("ui.core", []);
 
 })(angular, angular.module("ui.core"), this);
 
-angular.module("ui.navigation", ["ui.core"]);
+angular.module("ui.navigation", ["ui.core"])
+    .run(function () {
+        console.log('Invoking Run of Navigation Module');
+    });
 /**
  * UI Layout Module
  */
-angular.module("ui.layout", ["ui.core", "ui.navigation"]);
+angular.module("ui.layout", ["ui.core", "ui.navigation"])
+    .run(function () {
+        console.log('Invoking Run of Layout Module');
+    });
 (function (angular, layoutModule, global, undefined) {
     function LayoutService () {
         console.log('Layout service');
