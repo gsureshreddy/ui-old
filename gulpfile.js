@@ -48,7 +48,7 @@ gulp.task('scripts', ['core:scripts', 'layout:scripts', 'navigation:scripts'], f
         'release/ui.navigation.js',
         'release/ui.layout.js'])
         .pipe(concat('ui.all.js'))
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('release/'));
 })
 gulp.task('default',['clean', 'scripts'], function () {
     console.log("Executing default task")

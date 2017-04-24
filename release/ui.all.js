@@ -40,6 +40,9 @@ angular.module("ui.core", []);
 })(angular, angular.module("ui.core"), this);
 
 angular.module("ui.navigation", ["ui.core"]);
+/**
+ * UI Layout Module
+ */
 angular.module("ui.layout", ["ui.core", "ui.navigation"]);
 (function (angular, layoutModule, global, undefined) {
     function LayoutService () {

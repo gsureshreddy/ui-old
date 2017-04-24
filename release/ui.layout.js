@@ -1,3 +1,6 @@
+/**
+ * UI Layout Module
+ */
 angular.module("ui.layout", ["ui.core", "ui.navigation"]);
 (function (angular, layoutModule, global, undefined) {
     function LayoutService () {
