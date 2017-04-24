@@ -50,3 +50,4 @@ angular.module("ui.layout", ["ui.core", "ui.navigation"]);
     }
     layoutModule.service('LayoutService', LayoutService);
 })(angular, angular.module('ui.layout'), this)
+angular.module("ui", ["ui.core", "ui.navigation", "ui.layout"]);

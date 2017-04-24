@@ -46,7 +46,8 @@ gulp.task('navigation:scripts', function () {
 gulp.task('scripts', ['core:scripts', 'layout:scripts', 'navigation:scripts'], function () {
     return gulp.src(['release/ui.core.js',
         'release/ui.navigation.js',
-        'release/ui.layout.js'])
+        'release/ui.layout.js',
+        'all/src/all-modules.js'])
         .pipe(concat('ui.all.js'))
         .pipe(gulp.dest('release/'));
 })
