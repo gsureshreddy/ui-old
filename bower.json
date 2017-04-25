@@ -20,7 +20,7 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
+  "dependencies": {
     "angular": "^1.6.4",
     "angular-ui-router": "^0.4.2"
   }

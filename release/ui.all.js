@@ -2,7 +2,7 @@ angular.module("ui.core", [])
 .run(function () {
     console.log('Invoking Run of Core Module');
 });
-(function (angular, coreModule, global, undefined) {
+(function (ng, module, global, undefined) {
 
     /**
      * FileLoader
@@ -38,9 +38,9 @@ angular.module("ui.core", [])
     }
 
     //Registering provider
-    coreModule.provider("FileLoader", FileLoader);
+    module.provider("FileLoader", FileLoader);
 
-})(angular, angular.module("ui.core"), this);
+}(angular, angular.module("ui.core"), this));
 
 angular.module("ui.navigation", ["ui.core"])
     .run(function () {
@@ -53,10 +53,49 @@ angular.module("ui.layout", ["ui.core", "ui.navigation"])
     .run(function () {
         console.log('Invoking Run of Layout Module');
     });
-(function (angular, layoutModule, global, undefined) {
+(function (ng, module, global, undefined) {
+
+    module.directive('uiApp', function () {
+       return {
+           restrict     : 'AE',
+           replace      : true,
+           templateUrl  : function (element, attrs) {
+               if (attrs.templateUrl) {
+                   return attrs.templateUrl;
+               } else {
+                   return 'ui/layout/components/ui-app/component.html';
+               }
+           },
+           scope : {
+
+           },
+           compile : function (element, attrs) {
+               return {
+                   pre: function preLink ($scope, element, attrs) {
+                       console.log("Pre Link");
+                   },
+                   link : function link ($scope, element, attrs) {
+                       console.log("Link");
+                   },
+                   post : function postLink ($scope, element, attrs) {
+                       console.log("Post Link");
+                   }
+               }
+           },
+           controller : function ($scope) {
+               console.log("Controller");
+           }
+       }
+    });
+
+} (angular, angular.module("ui.layout"), this));
+(function (ng, module, global, undefined) {
+
     function LayoutService () {
         console.log('Layout service');
     }
-    layoutModule.service('LayoutService', LayoutService);
-})(angular, angular.module('ui.layout'), this)
+
+    module.service('LayoutService', LayoutService);
+}(angular, angular.module('ui.layout'), this));
+angular.module('ui.layout').run(['$templateCache', function($templateCache) {$templateCache.put('ui/layout/components/ui-app/component.html','<div class="ui-app">\n    <div class="ui-app-header">\n\n    </div>\n</div>');}]);
 angular.module("ui", ["ui.core", "ui.navigation", "ui.layout"]);

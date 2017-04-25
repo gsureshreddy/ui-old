@@ -1,4 +1,4 @@
-(function (angular, coreModule, global, undefined) {
+(function (ng, module, global, undefined) {
 
     /**
      * FileLoader
@@ -34,6 +34,6 @@
     }
 
     //Registering provider
-    coreModule.provider("FileLoader", FileLoader);
+    module.provider("FileLoader", FileLoader);
 
-})(angular, angular.module("ui.core"), this);
+}(angular, angular.module("ui.core"), this));

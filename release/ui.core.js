@@ -2,7 +2,7 @@ angular.module("ui.core", [])
 .run(function () {
     console.log('Invoking Run of Core Module');
 });
-(function (angular, coreModule, global, undefined) {
+(function (ng, module, global, undefined) {
 
     /**
      * FileLoader
@@ -38,6 +38,6 @@ angular.module("ui.core", [])
     }
 
     //Registering provider
-    coreModule.provider("FileLoader", FileLoader);
+    module.provider("FileLoader", FileLoader);
 
-})(angular, angular.module("ui.core"), this);
+}(angular, angular.module("ui.core"), this));
